@@ -12,6 +12,7 @@ from torch import Tensor
 from torch.nn import functional as F
 
 
+
 def find_multiple(n: int, k: int) -> int:
     if n % k == 0:
         return n
@@ -29,6 +30,8 @@ class ModelArgs:
     head_dim: int = 64
     rope_base: float = 10000
     norm_eps: float = 1e-5
+
+
 
     def __post_init__(self):
         if self.n_local_heads == -1:
